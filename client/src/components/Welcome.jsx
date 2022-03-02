@@ -56,7 +56,15 @@ const Welcome = () => {
                   {/* <SiEthereum fontSize={21} color="#fff" /> */}
                   <img src={sol} alt="sol" className="h-6" />
                 </div>
-                <BsInfoCircle />
+                <BsInfoCircle fontSize={17} color="#fff" />
+              </div>
+              <div>
+                <p className="text-white font-light texr-sm">
+                  0xsaedef........fedefeff
+                </p>
+                <p className="text-white font-semibold text-lg mt-1">
+                  0xsaedef........fedefeff
+                </p>
               </div>
             </div>
           </div>
