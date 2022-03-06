@@ -1,11 +1,3 @@
-// module.exports = {
-//   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// };
-
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   mode: "jit",
@@ -39,6 +31,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
-  // plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms")],
 };
