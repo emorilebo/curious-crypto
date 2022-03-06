@@ -30,9 +30,10 @@ const Welcome = () => {
     sendTransaction,
     handleChange,
   } = useContext(TransactionContext);
+
   console.log(currentAccount);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
     e.preventDefault();
     if (!addressTo || !amount || !keyword || !message) return;
@@ -123,7 +124,7 @@ const Welcome = () => {
               }}
             />
             <div className="h-[1px] w-full bg-gray-400 my-2" />
-            {true ? (
+            {false ? (
               <Loader />
             ) : (
               <button
