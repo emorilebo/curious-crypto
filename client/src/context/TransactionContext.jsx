@@ -70,6 +70,16 @@ export const TransactionProvider = ({ children }) => {
       //get the data from the form...
       const { addressTo, amount, keyword, message } = formData;
       const transactionContract = getEthereumContract();
+      const parsedAmount = ethers.utils.parseEther(amount);
+      await ethereum.request({
+        method: 'eth_sendTransaction',
+        params: [{
+          from: currentAccount,
+          to: addressTo,
+          gas: '0x5208' ,//21000gwei
+          value: parsedAmount._hex, //0.0001
+        }]
+      })
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object.");
